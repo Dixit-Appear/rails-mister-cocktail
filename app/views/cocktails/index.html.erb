@@ -13,8 +13,19 @@
   </div> -->
 </div>
 
-  <% @cocktails.each do |cocktail| %>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  <% end %>
+<div class="container d-flex justify-content-around">
+<% @cocktails.each do |cocktail| %>
+<div class="card" style="width: 18rem;">
+  <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title"><%= cocktail.name%></h5>
+    <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+ <% end %>
+</div>
+
+
 
 
