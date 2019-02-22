@@ -2,13 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
   padding: 16px 24px;
-  background-color: black;
+  background-color: transparent;
+  margin: 0 30px;
+  font-size: 30px;
+}
+
+
+
+.navbar-lewagon-white {
+  background: white;
 }
 
 .navbar-lewagon .brand {
-  width: 40px;
+  width: 60px;
 }
 
 .navbar-lewagon .navbar-lewagon-actions {
