@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+// Footer
 .footer {
   background: #F4F4F4;
   display: flex;
@@ -30,22 +30,35 @@
   margin-bottom: 100px;
 }
 
-.card{
+// Cocktails display card after crating
+
+.card-category a{
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.card-category {
+  text-decoration: none;
+  height: 300px;
   background-size: cover;
   background-position: center;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
+  color: white !important;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-img-top{
-  width: 250px;
-  height: 200px;
-  background-position: center;
+.cards-box{
+  margin: 10px 24px 50px 10px
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+

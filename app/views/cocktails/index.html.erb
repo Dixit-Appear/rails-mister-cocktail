@@ -1,31 +1,21 @@
-
+<!-- banner img + js text -->
 <div class="home-banner">
   <div class="image-left">
-    <!-- immagine sulla sinistra di banne.jpg -->
     <%= image_tag "banner.png", alt: "Le Wagon", width: 700 %>
   </div>
-
-    <!-- testo con la scritta js che si compone automaticamente  -->
     <span id="banner-typed-text"></span>
-
-<!--   <div class="card">
-    card sopra immagine sul bottom destro con shadow
-  </div> -->
 </div>
 
-<div class="container d-flex justify-content-around">
+<!-- Card -->
+<div class="cards-box">
+<div class="cards">
 <% @cocktails.each do |cocktail| %>
-<div class="card" style="width: 18rem;">
-  <img src="https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>" class="card-img-top" alt="">
-  <div class="card-body">
-    <h5 class="card-title"><%= cocktail.name%></h5>
-    <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-  </div>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)">
+  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
 </div>
  <% end %>
 </div>
-
+</div>
 
 
 
