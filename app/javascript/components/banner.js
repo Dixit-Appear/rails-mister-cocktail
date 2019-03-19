@@ -1,11 +1,11 @@
 import Typed from 'typed.js';
 
-const loadDynamicBannerText = () => {
-  new Typed('#banner-typed-text', {
-    strings: ["Create your Cocktail"],
+const typed = () => {
+  new Typed('#typed', {
+    stringsElement: '#typed-strings',
     typeSpeed: 50,
     loop: true
   });
 }
 
-export { loadDynamicBannerText };
+export { typed };

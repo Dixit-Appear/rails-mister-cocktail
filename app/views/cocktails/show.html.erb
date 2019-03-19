@@ -1,12 +1,32 @@
-<strong>Cocktail Name : </strong>
-<%= @cocktail.name %>
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.description  %>
-    <%= dose.ingredient.name  %>
-    <%= link_to "Delete Dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
-<%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="page-container">
+  <div class="container">
+    <div class="banne-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)">
+      <h3><%= @cocktail.name %></h3>
+    </div>
+  </div>
 
-<%= link_to "All Cocktails", cocktails_path, class: "btn btn-primary"%>
+  <div class="container">
+    <div class="d-flex justify-content-between">
+        <h3>Description</h3>
+        <h3>Ingredients</h3>
+    </div>
+    <div class="d-flex justify-content-between">
 
+      <% @cocktail.doses.each do |dose| %>
+        <div class="description text-center">
+          <%= dose.description  %>
+        </div>
+        <div class="ingredient text-center">
+          <%= dose.ingredient.name  %>
+        </div>
+    </div>
+    <%= link_to "Delete ingredient and description", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+
+    <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
+    <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+
+    <%= link_to "All Cocktails", cocktails_path, class: "btn btn-primary"%>
+
+  </div>
+</div>
