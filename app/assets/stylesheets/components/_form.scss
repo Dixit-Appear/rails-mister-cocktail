@@ -32,7 +32,7 @@
   padding: 50px;
   height: auto;
   margin-top: 90px;
-  width: 40%;
+  width: 40% !important;
   background-size: cover;
   background-position: center;
   align-items: center;
@@ -48,3 +48,13 @@
   font-size: 24px;
 }
 
+
+.all-cocktail{
+  margin-top: 30px;
+}
+
+#cocktail_name{
+  border-radius: 5px;
+  position: relative;
+      top: 3px;
+}

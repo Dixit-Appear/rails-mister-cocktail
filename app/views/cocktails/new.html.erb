@@ -4,12 +4,13 @@
           <h3>New Cocktails</h3>
         </div>
           <%= form_for(@cocktail) do |f| %>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-            <div class="btn btn-ghost">
-            <%= f.submit%>
-            </div>
+
+            <%= f.text_field :name, placeholder: "Cocktail Name" %>
+            <%= f.submit 'create cocktail', class: 'btn btn-ghost'%>
+
           <% end %>
-          <%= link_to "All Cocktails", cocktails_path, class: "btn btn-ghost"%>
+          <div class="all-cocktail">
+           <%= link_to "All Cocktails", cocktails_path, class: "btn btn-ghost"%>
+          </div>
     </div>
 </div>
