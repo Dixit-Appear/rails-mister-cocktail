@@ -2,7 +2,7 @@
   <%= link_to "< Back to cocktail", cocktail_path(@cocktail), class: "back" %>
   <div class="container d-flex justify-content-center">
     <div class="d-flex text-center form-new-dose">
-      <h3 class="add-text">Add Ingredient and description</h3>
+      <h3 class="add-text">Add Ingredient and description for <%=@cocktail.name%></h3>
       <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description %>
         <%= f.association :ingredient %>
