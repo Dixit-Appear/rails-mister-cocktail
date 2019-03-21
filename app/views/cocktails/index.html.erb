@@ -16,10 +16,10 @@
   <div class="cards-box">
 
 
-  <div class="cards">
+  <div class="cards" >
   <% @cocktails.each do |cocktail| %>
   <%= link_to cocktail_path(cocktail) do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)">
+  <div class="card-category" data-aos="fade-up" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)">
     <h3><%=cocktail.name%></h3>
   </div>
    <% end %>
@@ -30,3 +30,6 @@
 </div>
 
 
+<script>
+  AOS.init();
+</script>
