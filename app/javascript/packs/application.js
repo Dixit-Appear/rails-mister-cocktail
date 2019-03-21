@@ -9,7 +9,7 @@
 
 import 'bootstrap';
 
-import { typed } from '../components/banner';
-typed();
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
 
 
